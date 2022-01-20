@@ -24,7 +24,9 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 * @param filepath states the path to a file with symptoms ordered one per line
 	 */
 	public ReadSymptomDataFromFile (String filepath) {
+		
 		this.filepath = filepath;
+		
 	}
 
 	/**

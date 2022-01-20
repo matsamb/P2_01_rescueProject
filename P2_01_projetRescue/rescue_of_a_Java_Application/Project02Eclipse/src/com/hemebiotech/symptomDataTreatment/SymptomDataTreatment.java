@@ -36,10 +36,11 @@ public class SymptomDataTreatment implements ISymptomDataTreatment {
 	 */
 
 	@Override
-	public Map<String, Integer> MapOfSymptomsWithOccurrences() {
+	public Map<String, Integer> mapOfSymptomsWithOccurrences() {
 
 		this.symptomsList.forEach(symptom -> symptomsMapWithOccurrences.put(symptom,
 				symptomsMapWithOccurrences.getOrDefault(symptom, 0) + 1));
+		
 
 		return symptomsMapWithOccurrences;
 	}

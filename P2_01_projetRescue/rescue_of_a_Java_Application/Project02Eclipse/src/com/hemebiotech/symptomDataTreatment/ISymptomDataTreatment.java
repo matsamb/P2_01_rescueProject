@@ -17,7 +17,7 @@ public interface ISymptomDataTreatment {
 	 * @return symptoms mapped to their respective occurrence, as a Map of Strings and Integer.
 	 */
 
-	Map<String, Integer> MapOfSymptomsWithOccurrences();
+	Map<String, Integer> mapOfSymptomsWithOccurrences();
 
 
 }
