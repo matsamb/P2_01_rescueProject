@@ -26,7 +26,7 @@ public class AnalyticsCounter {
 		ISymptomReader symptomsReader = new ReadSymptomDataFromFile("P2_01_projetRescue\\symptoms.txt");
 
 		ISymptomDataTreatment symptomsDataTreatment = new SymptomDataTreatment(symptomsReader.getSymptoms());
-
+		
 		ISymptomWriter symptomsWriter = new WriteSymptomDataToFile(symptomsDataTreatment.mapOfSymptomsWithOccurrences(),
 				"result.out");
 

@@ -45,7 +45,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 			try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter(filepath));
 
-				this.mapOfSymptomAndOccurrence.entrySet().stream().forEach(SymptomAndOccurrence -> {
+				this.mapOfSymptomAndOccurrence.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(SymptomAndOccurrence -> {
 					try {
 						writer.write(SymptomAndOccurrence + "\n");
 					} catch (IOException e) {

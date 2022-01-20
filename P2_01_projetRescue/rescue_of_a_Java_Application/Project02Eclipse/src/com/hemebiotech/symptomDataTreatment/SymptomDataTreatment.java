@@ -26,7 +26,7 @@ public class SymptomDataTreatment implements ISymptomDataTreatment {
 	 * @param symptomsList
 	 */
 	public SymptomDataTreatment(List<String> symptomsList) {
-
+		
 		this.symptomsList = symptomsList;
 	}
 
@@ -41,9 +41,11 @@ public class SymptomDataTreatment implements ISymptomDataTreatment {
 	@Override 
 	public Map<String, Integer> mapOfSymptomsWithOccurrences() {
 		
+		
 		this.symptomsList.forEach(symptom -> {
-			symptomsMapWithOccurrences.put(
-					symptom, symptomsMapWithOccurrences.getOrDefault(symptom, 0) + 1);				
+					symptomsMapWithOccurrences.put(
+					symptom, symptomsMapWithOccurrences.getOrDefault(symptom, 0) + 1);	
+			
 		});
 		
 

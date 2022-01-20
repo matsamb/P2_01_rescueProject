@@ -43,7 +43,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		Collections.sort(result);
+		Collections.sort(result) ;
 		return result;
 	}
 
