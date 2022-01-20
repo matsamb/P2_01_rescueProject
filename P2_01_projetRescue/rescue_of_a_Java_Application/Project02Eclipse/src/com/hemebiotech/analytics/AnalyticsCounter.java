@@ -21,12 +21,12 @@ public class AnalyticsCounter {
 
 	public static void main(String[] args) throws Exception {
 
-		ISymptomReader symptomsReader = new ReadSymptomDataFromFile("Project02Eclipse\\symptoms.txt");				
+		ISymptomReader symptomsReader = new ReadSymptomDataFromFile("P2_01_projetRescue\\symptoms.txt");				
 		
 		ISymptomDataTreatment symptomsDataTreatment = new SymptomDataTreatment(symptomsReader.GetSymptoms());
 		
 		ISymptomWriter symptomsWriter = new WriteSymptomDataToFile(
-				symptomsDataTreatment.MapOfSymptomsWithOccurrences(), "Project02Eclipse\\result.out");
+				symptomsDataTreatment.MapOfSymptomsWithOccurrences(), "result.out");
 		
 		symptomsWriter.writeSymptomAndOccurenceToFile();
 		
