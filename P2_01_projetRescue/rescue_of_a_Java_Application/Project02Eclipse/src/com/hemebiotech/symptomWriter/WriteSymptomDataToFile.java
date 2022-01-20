@@ -3,7 +3,6 @@ package com.hemebiotech.symptomWriter;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Map;
 
 /**
