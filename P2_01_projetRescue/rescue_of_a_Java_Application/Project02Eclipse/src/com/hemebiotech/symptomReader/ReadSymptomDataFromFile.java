@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,6 +21,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	private List<String> result = new ArrayList<>() ;
 	
 	/**
+	 * construct an object of this class
 	 * 
 	 * @param filepath states the path to a file with symptoms ordered one per line
 	 */
@@ -34,13 +36,14 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 * there is one symptom per line, duplicates are possible.
 	 */
 	@Override
-	public List<String> GetSymptoms() {
+	public List<String> getSymptoms() {
 		
 		try {
 			result = Files.lines(Paths.get(filepath)).collect(Collectors.toList());
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
+		Collections.sort(result) ;
 		return result;
 	}
 
