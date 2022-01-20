@@ -1,5 +1,7 @@
 package com.hemebiotech.symptomDataTreatment;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +17,7 @@ import java.util.Map;
 
 public class SymptomDataTreatment implements ISymptomDataTreatment {
 
-	private List<String> symptomsList;
+	private List<String> symptomsList = new ArrayList<>();
 	private Map<String, Integer> symptomsMapWithOccurrences = new HashMap<>();
 
 	/**
@@ -38,9 +40,11 @@ public class SymptomDataTreatment implements ISymptomDataTreatment {
 
 	@Override 
 	public Map<String, Integer> mapOfSymptomsWithOccurrences() {
-
-		this.symptomsList.forEach(symptom -> symptomsMapWithOccurrences.put(symptom,
-				symptomsMapWithOccurrences.getOrDefault(symptom, 0) + 1));
+		
+		this.symptomsList.forEach(symptom -> {
+			symptomsMapWithOccurrences.put(
+					symptom, symptomsMapWithOccurrences.getOrDefault(symptom, 0) + 1);				
+		});
 		
 
 		return symptomsMapWithOccurrences;

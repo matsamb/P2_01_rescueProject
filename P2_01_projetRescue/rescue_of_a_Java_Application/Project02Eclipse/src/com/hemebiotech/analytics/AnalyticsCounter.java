@@ -21,15 +21,14 @@ import com.hemebiotech.symptomWriter.WriteSymptomDataToFile;
 
 public class AnalyticsCounter {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception {	    
 
-		ISymptomReader symptomsReader = new ReadSymptomDataFromFile(
-				"C:\\Users\\matlu\\git\\P2_01_rescueProject\\P2_01_projetRescue\\rescue_of_a_Java_Application\\Project02Eclipse\\symptoms.txt");
+		ISymptomReader symptomsReader = new ReadSymptomDataFromFile("symptoms.txt");
 
 		ISymptomDataTreatment symptomsDataTreatment = new SymptomDataTreatment(symptomsReader.getSymptoms());
 
 		ISymptomWriter symptomsWriter = new WriteSymptomDataToFile(symptomsDataTreatment.mapOfSymptomsWithOccurrences(),
-				"C:\\Users\\matlu\\git\\P2_01_rescueProject\\result.out");
+				"result.out");
 
 		symptomsWriter.writeSymptomAndOccurenceToFile();
 

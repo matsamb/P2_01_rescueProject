@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,6 +43,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
+		Collections.sort(result);
 		return result;
 	}
 
