@@ -3,6 +3,7 @@ package com.hemebiotech.symptomWriter;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -20,6 +21,8 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	String filepath;
 
 	/**
+	 * construct an object of this class
+	 * 
 	 * @param mapOfsymptomAndOccurrence
 	 * @param filepath
 	 */
@@ -42,7 +45,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 			try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter(filepath));
 
-				this.mapOfSymptomAndOccurrence.entrySet().stream().forEach(SymptomAndOccurrence -> {
+				this.mapOfSymptomAndOccurrence.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(SymptomAndOccurrence -> {
 					try {
 						writer.write(SymptomAndOccurrence + "\n");
 					} catch (IOException e) {
