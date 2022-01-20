@@ -20,6 +20,8 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	String filepath;
 
 	/**
+	 * construct an object of this class
+	 * 
 	 * @param mapOfsymptomAndOccurrence
 	 * @param filepath
 	 */

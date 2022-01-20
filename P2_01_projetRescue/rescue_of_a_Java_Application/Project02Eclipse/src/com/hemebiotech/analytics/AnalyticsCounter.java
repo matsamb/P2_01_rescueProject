@@ -26,9 +26,9 @@ public class AnalyticsCounter {
 		ISymptomReader symptomsReader = new ReadSymptomDataFromFile(
 				"C:\\Users\\matlu\\git\\P2_01_rescueProject\\P2_01_projetRescue\\rescue_of_a_Java_Application\\Project02Eclipse\\symptoms.txt");
 
-		ISymptomDataTreatment symptomsDataTreatment = new SymptomDataTreatment(symptomsReader.GetSymptoms());
+		ISymptomDataTreatment symptomsDataTreatment = new SymptomDataTreatment(symptomsReader.getSymptoms());
 
-		ISymptomWriter symptomsWriter = new WriteSymptomDataToFile(symptomsDataTreatment.MapOfSymptomsWithOccurrences(),
+		ISymptomWriter symptomsWriter = new WriteSymptomDataToFile(symptomsDataTreatment.mapOfSymptomsWithOccurrences(),
 				"C:\\Users\\matlu\\git\\P2_01_rescueProject\\result.out");
 
 		symptomsWriter.writeSymptomAndOccurenceToFile();
