@@ -17,7 +17,7 @@ import com.hemebiotech.symptomWriter.WriteSymptomDataToFile;
  * 
  * @author matondo lusamba
  *
- */  
+ */
 
 public class AnalyticsCounter {
 
